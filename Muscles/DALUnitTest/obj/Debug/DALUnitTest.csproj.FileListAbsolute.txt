@@ -1,0 +1,10 @@
+c:\users\mbuller\documents\visual studio 2012\Projects\Muscles\DALUnitTest\obj\Debug\DALUnitTest.csprojResolveAssemblyReference.cache
+c:\users\mbuller\documents\visual studio 2012\Projects\Muscles\DALUnitTest\bin\Debug\DALUnitTest.dll
+c:\users\mbuller\documents\visual studio 2012\Projects\Muscles\DALUnitTest\bin\Debug\DALUnitTest.pdb
+c:\users\mbuller\documents\visual studio 2012\Projects\Muscles\DALUnitTest\bin\Debug\DAL.dll
+c:\users\mbuller\documents\visual studio 2012\Projects\Muscles\DALUnitTest\bin\Debug\EntityFramework.dll
+c:\users\mbuller\documents\visual studio 2012\Projects\Muscles\DALUnitTest\bin\Debug\DAL.pdb
+c:\users\mbuller\documents\visual studio 2012\Projects\Muscles\DALUnitTest\bin\Debug\EntityFramework.xml
+c:\users\mbuller\documents\visual studio 2012\Projects\Muscles\DALUnitTest\obj\Debug\DALUnitTest.dll
+c:\users\mbuller\documents\visual studio 2012\Projects\Muscles\DALUnitTest\obj\Debug\DALUnitTest.pdb
+c:\users\mbuller\documents\visual studio 2012\Projects\Muscles\DALUnitTest\bin\Debug\DALUnitTest.dll.config

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bullerMusclesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="bullerMusclesModelStoreContainer">
+    <EntitySet Name="States" EntityType="bullerMusclesModel.Store.States" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tickets" EntityType="bullerMusclesModel.Store.Tickets" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="bullerMusclesModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_dbo_Tickets_dbo_States_TicketState_StateId" Association="bullerMusclesModel.Store.FK_dbo_Tickets_dbo_States_TicketState_StateId">
+      <End Role="States" EntitySet="States" />
+      <End Role="Tickets" EntitySet="Tickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Tickets_dbo_Users_Owner_UserId" Association="bullerMusclesModel.Store.FK_dbo_Tickets_dbo_Users_Owner_UserId">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Tickets" EntitySet="Tickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Tickets_dbo_Users_Submitter_UserId" Association="bullerMusclesModel.Store.FK_dbo_Tickets_dbo_Users_Submitter_UserId">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Tickets" EntitySet="Tickets" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="States">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="StateName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tickets">
+    <Key>
+      <PropertyRef Name="TicketId" />
+    </Key>
+    <Property Name="TicketId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Headline" Type="varchar" MaxLength="255" />
+    <Property Name="Notes" Type="varchar(max)" />
+    <Property Name="Owner_UserId" Type="int" />
+    <Property Name="Submitter_UserId" Type="int" />
+    <Property Name="TicketState_StateId" Type="int" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_dbo_Tickets_dbo_States_TicketState_StateId">
+    <End Role="States" Type="bullerMusclesModel.Store.States" Multiplicity="0..1" />
+    <End Role="Tickets" Type="bullerMusclesModel.Store.Tickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="States">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="Tickets">
+        <PropertyRef Name="TicketState_StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Tickets_dbo_Users_Owner_UserId">
+    <End Role="Users" Type="bullerMusclesModel.Store.Users" Multiplicity="0..1" />
+    <End Role="Tickets" Type="bullerMusclesModel.Store.Tickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Tickets">
+        <PropertyRef Name="Owner_UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Tickets_dbo_Users_Submitter_UserId">
+    <End Role="Users" Type="bullerMusclesModel.Store.Users" Multiplicity="0..1" />
+    <End Role="Tickets" Type="bullerMusclesModel.Store.Tickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Tickets">
+        <PropertyRef Name="Submitter_UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

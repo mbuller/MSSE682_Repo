@@ -1,0 +1,12 @@
+C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\ServiceUnitTest\obj\Debug\ServiceUnitTest.csprojResolveAssemblyReference.cache
+C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\ServiceUnitTest\bin\Debug\ServiceUnitTest.dll.config
+C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\ServiceUnitTest\bin\Debug\ServiceUnitTest.dll
+C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\ServiceUnitTest\bin\Debug\ServiceUnitTest.pdb
+C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\ServiceUnitTest\bin\Debug\DAL.dll
+C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\ServiceUnitTest\bin\Debug\EntityFramework.dll
+C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\ServiceUnitTest\bin\Debug\Service.dll
+C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\ServiceUnitTest\bin\Debug\DAL.pdb
+C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\ServiceUnitTest\bin\Debug\Service.pdb
+C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\ServiceUnitTest\bin\Debug\EntityFramework.xml
+C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\ServiceUnitTest\obj\Debug\ServiceUnitTest.dll
+C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\ServiceUnitTest\obj\Debug\ServiceUnitTest.pdb

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bullerMusclesModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="bullerMusclesEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Tickets" EntityType="bullerMusclesModel.Ticket" />
+    <EntitySet Name="Users" EntityType="bullerMusclesModel.User" />
+    <AssociationSet Name="FK_dbo_Tickets_dbo_Users_Owner_UserId" Association="bullerMusclesModel.FK_dbo_Tickets_dbo_Users_Owner_UserId">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Tickets" EntitySet="Tickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Tickets_dbo_Users_Submitter_UserId" Association="bullerMusclesModel.FK_dbo_Tickets_dbo_Users_Submitter_UserId">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Tickets" EntitySet="Tickets" />
+    </AssociationSet>
+    <EntitySet Name="States" EntityType="bullerMusclesModel.State" />
+    <AssociationSet Name="FK_dbo_Tickets_dbo_States_TicketState_StateId" Association="bullerMusclesModel.FK_dbo_Tickets_dbo_States_TicketState_StateId">
+      <End Role="State" EntitySet="States" />
+      <End Role="Ticket" EntitySet="Tickets" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Ticket">
+    <Key>
+      <PropertyRef Name="TicketId" />
+    </Key>
+    <Property Name="TicketId" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Headline" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Notes" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Owner_UserId" Type="Int32" />
+    <Property Name="Submitter_UserId" Type="Int32" />
+    <Property Name="TicketState_StateId" Type="Int32" />
+    <NavigationProperty Name="Owner" Relationship="bullerMusclesModel.FK_dbo_Tickets_dbo_Users_Owner_UserId" FromRole="Tickets" ToRole="Users" />
+    <NavigationProperty Name="Submitter" Relationship="bullerMusclesModel.FK_dbo_Tickets_dbo_Users_Submitter_UserId" FromRole="Tickets" ToRole="Users" />
+    <NavigationProperty Name="State" Relationship="bullerMusclesModel.FK_dbo_Tickets_dbo_States_TicketState_StateId" FromRole="Ticket" ToRole="State" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="TicketsOwned" Relationship="bullerMusclesModel.FK_dbo_Tickets_dbo_Users_Owner_UserId" FromRole="Users" ToRole="Tickets" />
+    <NavigationProperty Name="TicketsSubmitted" Relationship="bullerMusclesModel.FK_dbo_Tickets_dbo_Users_Submitter_UserId" FromRole="Users" ToRole="Tickets" />
+  </EntityType>
+  <Association Name="FK_dbo_Tickets_dbo_Users_Owner_UserId">
+    <End Role="Users" Type="bullerMusclesModel.User" Multiplicity="0..1" />
+    <End Role="Tickets" Type="bullerMusclesModel.Ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Tickets">
+        <PropertyRef Name="Owner_UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Tickets_dbo_Users_Submitter_UserId">
+    <End Role="Users" Type="bullerMusclesModel.User" Multiplicity="0..1" />
+    <End Role="Tickets" Type="bullerMusclesModel.Ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Tickets">
+        <PropertyRef Name="Submitter_UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Type="Int32" Name="StateId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="StateName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tickets" Relationship="bullerMusclesModel.FK_dbo_Tickets_dbo_States_TicketState_StateId" FromRole="State" ToRole="Ticket" />
+  </EntityType>
+  <Association Name="FK_dbo_Tickets_dbo_States_TicketState_StateId">
+    <End Type="bullerMusclesModel.State" Role="State" Multiplicity="0..1" />
+    <End Type="bullerMusclesModel.Ticket" Role="Ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="Ticket">
+        <PropertyRef Name="TicketState_StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
