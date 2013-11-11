@@ -40,6 +40,9 @@
           <Property Name="Owner_UserId" Type="int" />
           <Property Name="Submitter_UserId" Type="int" />
           <Property Name="TicketState_StateId" Type="int" />
+          <Property Name="TicketOwnerUserName" Type="varchar" MaxLength="50" />
+          <Property Name="TicketSubmitterUserName" Type="varchar" MaxLength="50" />
+          <Property Name="TicketStateName" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -120,6 +123,9 @@
           <NavigationProperty Name="Owner" Relationship="bullerMusclesModel.FK_dbo_Tickets_dbo_Users_Owner_UserId" FromRole="Tickets" ToRole="Users" />
           <NavigationProperty Name="Submitter" Relationship="bullerMusclesModel.FK_dbo_Tickets_dbo_Users_Submitter_UserId" FromRole="Tickets" ToRole="Users" />
           <NavigationProperty Name="State" Relationship="bullerMusclesModel.FK_dbo_Tickets_dbo_States_TicketState_StateId" FromRole="Ticket" ToRole="State" />
+          <Property Type="String" Name="TicketOwnerUserName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TicketSubmitterUserName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TicketStateName" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -184,6 +190,9 @@
           <EntitySetMapping Name="Tickets">
             <EntityTypeMapping TypeName="bullerMusclesModel.Ticket">
               <MappingFragment StoreEntitySet="Tickets">
+                <ScalarProperty Name="TicketStateName" ColumnName="TicketStateName" />
+                <ScalarProperty Name="TicketSubmitterUserName" ColumnName="TicketSubmitterUserName" />
+                <ScalarProperty Name="TicketOwnerUserName" ColumnName="TicketOwnerUserName" />
                 <ScalarProperty Name="TicketId" ColumnName="TicketId" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Headline" ColumnName="Headline" />

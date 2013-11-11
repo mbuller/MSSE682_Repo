@@ -9,3 +9,14 @@ C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\Business\bin\Debu
 C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
 C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\Business\obj\Debug\Business.dll
 C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\Business\obj\Debug\Business.pdb
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\Business\bin\Debug\Business.dll
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\Business\bin\Debug\Business.pdb
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\Business\bin\Debug\DAL.dll
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\Business\bin\Debug\Service.dll
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\Business\bin\Debug\EntityFramework.dll
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\Business\bin\Debug\DAL.pdb
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\Business\bin\Debug\Service.pdb
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\Business\bin\Debug\EntityFramework.xml
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\Business\obj\Debug\Business.dll
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\Business\obj\Debug\Business.pdb

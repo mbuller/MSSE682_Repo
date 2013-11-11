@@ -31,6 +31,9 @@
     <NavigationProperty Name="Owner" Relationship="bullerMusclesModel.FK_dbo_Tickets_dbo_Users_Owner_UserId" FromRole="Tickets" ToRole="Users" />
     <NavigationProperty Name="Submitter" Relationship="bullerMusclesModel.FK_dbo_Tickets_dbo_Users_Submitter_UserId" FromRole="Tickets" ToRole="Users" />
     <NavigationProperty Name="State" Relationship="bullerMusclesModel.FK_dbo_Tickets_dbo_States_TicketState_StateId" FromRole="Ticket" ToRole="State" />
+    <Property Type="String" Name="TicketOwnerUserName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TicketSubmitterUserName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TicketStateName" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="User">
     <Key>

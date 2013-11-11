@@ -6,3 +6,11 @@ c:\users\mbuller\documents\visual studio 2012\Projects\Muscles\DAL\bin\Debug\Ent
 c:\users\mbuller\documents\visual studio 2012\Projects\Muscles\DAL\obj\Debug\DAL.dll
 c:\users\mbuller\documents\visual studio 2012\Projects\Muscles\DAL\obj\Debug\DAL.pdb
 C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\DAL\bin\Debug\DAL.dll.config
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\DAL\bin\Debug\DAL.dll
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\DAL\bin\Debug\DAL.pdb
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\DAL\bin\Debug\EntityFramework.dll
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\DAL\bin\Debug\EntityFramework.xml
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\DAL\obj\Debug\DAL.dll
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\DAL\obj\Debug\DAL.pdb

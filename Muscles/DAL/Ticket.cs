@@ -21,6 +21,9 @@ namespace DAL
         public Nullable<int> Owner_UserId { get; set; }
         public Nullable<int> Submitter_UserId { get; set; }
         public Nullable<int> TicketState_StateId { get; set; }
+        public string TicketOwnerUserName { get; set; }
+        public string TicketSubmitterUserName { get; set; }
+        public string TicketStateName { get; set; }
     
         public virtual User Owner { get; set; }
         public virtual User Submitter { get; set; }

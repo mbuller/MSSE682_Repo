@@ -35,6 +35,9 @@
     <Property Name="Owner_UserId" Type="int" />
     <Property Name="Submitter_UserId" Type="int" />
     <Property Name="TicketState_StateId" Type="int" />
+    <Property Name="TicketOwnerUserName" Type="varchar" MaxLength="50" />
+    <Property Name="TicketSubmitterUserName" Type="varchar" MaxLength="50" />
+    <Property Name="TicketStateName" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Users">
     <Key>

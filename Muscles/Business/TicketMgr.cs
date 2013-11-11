@@ -12,15 +12,40 @@ namespace Business
     public class TicketMgr : Manager
     {
         public ITicketSvc ticketSvc;
+        public IUserSvc userSvc;
+        public IStateSvc stateSvc;
 
         public TicketMgr()
         {
             ticketSvc = (ITicketSvc)GetService("TicketSvcRepoImpl");
+            userSvc = (IUserSvc)GetService("UserSvcRepoImpl");
+            stateSvc = (IStateSvc)GetService("StateSvcRepoImpl");
         }
 
         public void CreateTicket(Ticket ticket)
         {
             //    ITicketSvc ticketSvc = (ITicketSvc)GetService("TicketSvcRepoImpl");
+            if (ticket.Owner_UserId != null)
+            {
+                User owner = userSvc.RetrieveUser("UserId", (int)ticket.Owner_UserId);
+
+                if (owner.UserName != null)
+                    ticket.TicketOwnerUserName = owner.UserName;
+            }
+            if (ticket.Submitter_UserId != null)
+            {
+                User submitter = userSvc.RetrieveUser("UserId", (int)ticket.Submitter_UserId);
+
+                if (submitter.UserName != null)
+                    ticket.TicketSubmitterUserName = submitter.UserName;
+            }
+            if (ticket.TicketState_StateId != null)
+            {
+                State stateName = stateSvc.RetrieveState("StateId", (int)ticket.TicketState_StateId);
+
+                if (stateName.StateName != null)
+                    ticket.TicketStateName = stateName.StateName;
+            }
             ticketSvc.CreateTicket(ticket);
         }
 
@@ -36,6 +61,27 @@ namespace Business
         public void ModifyTicket(Ticket ticket)
         {
             //    ITicketSvc ticketSvc = (ITicketSvc)GetService("TicketSvcRepoImpl");
+            if (ticket.Owner_UserId != null)
+            {
+                User owner = userSvc.RetrieveUser("UserId", (int)ticket.Owner_UserId);
+                
+                if (owner.UserName != null)
+                    ticket.TicketOwnerUserName = owner.UserName;
+            }
+            if (ticket.Submitter_UserId != null)
+            {
+                User submitter = userSvc.RetrieveUser("UserId", (int)ticket.Submitter_UserId);
+
+                if (submitter.UserName != null)
+                    ticket.TicketSubmitterUserName = submitter.UserName;
+            }
+            if (ticket.TicketState_StateId != null)
+            {
+                State stateName = stateSvc.RetrieveState("StateId", (int)ticket.TicketState_StateId);
+
+                if (stateName.StateName != null)
+                    ticket.TicketStateName = stateName.StateName;
+            }
             ticketSvc.ModifyTicket(ticket);
         }
 

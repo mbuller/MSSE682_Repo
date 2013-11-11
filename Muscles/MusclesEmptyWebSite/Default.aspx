@@ -5,16 +5,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-</head>
+    </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
-    </div>
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+        <br />
+        <table style="width:99%;">
+            <tr>
+                <td>
+                    
+                    <a href="ViewAllTickets.aspx">View All Tickets</a></td>
+                <td>
+                    
+                    <a href="ViewMyTickets.aspx">View My Tickets</a></td>
+                <td>
+                    
+                    <a href="CreateTicket.aspx">Create Ticket</a></td>
+                <td>
+                    
+                    <a href="SearchTickets.aspx">Search Ticket</a></td>
+            </tr>
+        </table>
     </form>
-</body>
+    </body>
 </html>

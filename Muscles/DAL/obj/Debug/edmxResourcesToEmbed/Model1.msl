@@ -4,6 +4,9 @@
     <EntitySetMapping Name="Tickets">
       <EntityTypeMapping TypeName="bullerMusclesModel.Ticket">
         <MappingFragment StoreEntitySet="Tickets">
+          <ScalarProperty Name="TicketStateName" ColumnName="TicketStateName" />
+          <ScalarProperty Name="TicketSubmitterUserName" ColumnName="TicketSubmitterUserName" />
+          <ScalarProperty Name="TicketOwnerUserName" ColumnName="TicketOwnerUserName" />
           <ScalarProperty Name="TicketId" ColumnName="TicketId" />
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Headline" ColumnName="Headline" />

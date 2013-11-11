@@ -12,3 +12,17 @@ C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\BusinessUnitTest\
 C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\BusinessUnitTest\obj\Debug\BusinessUnitTest.dll
 C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\BusinessUnitTest\obj\Debug\BusinessUnitTest.pdb
 C:\Users\mbuller\documents\visual studio 2012\Projects\Muscles\BusinessUnitTest\bin\Debug\BusinessUnitTest.dll.config
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\BusinessUnitTest\bin\Debug\BusinessUnitTest.dll.config
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\BusinessUnitTest\bin\Debug\BusinessUnitTest.dll
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\BusinessUnitTest\bin\Debug\BusinessUnitTest.pdb
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\BusinessUnitTest\bin\Debug\Business.dll
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\BusinessUnitTest\bin\Debug\DAL.dll
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\BusinessUnitTest\bin\Debug\EntityFramework.dll
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\BusinessUnitTest\bin\Debug\Service.dll
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\BusinessUnitTest\bin\Debug\Business.pdb
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\BusinessUnitTest\bin\Debug\DAL.pdb
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\BusinessUnitTest\bin\Debug\Service.pdb
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\BusinessUnitTest\bin\Debug\EntityFramework.xml
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\BusinessUnitTest\obj\Debug\BusinessUnitTest.csprojResolveAssemblyReference.cache
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\BusinessUnitTest\obj\Debug\BusinessUnitTest.dll
+C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\BusinessUnitTest\obj\Debug\BusinessUnitTest.pdb
