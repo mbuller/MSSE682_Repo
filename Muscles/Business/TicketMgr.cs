@@ -68,13 +68,13 @@ namespace Business
                 if (owner.UserName != null)
                     ticket.TicketOwnerUserName = owner.UserName;
             }
-            if (ticket.Submitter_UserId != null)
+           /* if (ticket.Submitter_UserId != null)
             {
                 User submitter = userSvc.RetrieveUser("UserId", (int)ticket.Submitter_UserId);
 
                 if (submitter.UserName != null)
                     ticket.TicketSubmitterUserName = submitter.UserName;
-            }
+            }*/
             if (ticket.TicketState_StateId != null)
             {
                 State stateName = stateSvc.RetrieveState("StateId", (int)ticket.TicketState_StateId);
@@ -99,6 +99,16 @@ namespace Business
         {
             //    ITicketSvc ticketSvc = (ITicketSvc)GetService("TicketSvcRepoImpl");
             return ticketSvc.RetrieveTicket(DBColumnName, NullableIntValue);
+        }
+        public ICollection<Ticket> RetrieveTickets(String DBColumnName, int IntValue)
+        {
+            //    ITicketSvc ticketSvc = (ITicketSvc)GetService("TicketSvcRepoImpl");
+            return ticketSvc.RetrieveTickets(DBColumnName, IntValue);
+        }
+        public ICollection<Ticket> RetrieveTickets(String DBColumnName, int? NullableIntValue)
+        {
+            //    ITicketSvc ticketSvc = (ITicketSvc)GetService("TicketSvcRepoImpl");
+            return ticketSvc.RetrieveTickets(DBColumnName, NullableIntValue);
         }
         public ICollection<Ticket> RetrieveAllTickets()
         {

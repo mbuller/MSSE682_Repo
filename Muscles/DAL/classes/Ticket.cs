@@ -58,6 +58,14 @@ namespace DAL
 
         public Ticket(
         String Description,
+        String Headline)
+        {
+            this.Description = Description;
+            this.Headline = Headline;
+        }
+
+        public Ticket(
+        String Description,
         String Headline,
         String Notes)
         {
@@ -78,6 +86,19 @@ namespace DAL
             this.Description = Description;
             this.Headline = Headline;
             this.Notes = Notes;
+            this.Owner_UserId = Submitter_UserId;
+            this.Submitter_UserId = Submitter_UserId;
+            this.TicketState_StateId = TicketState_StateId;
+        }
+
+        public Ticket(
+        String Description,
+        String Headline,
+        Nullable<int> Submitter_UserId,
+        Nullable<int> TicketState_StateId)
+        {
+            this.Description = Description;
+            this.Headline = Headline;
             this.Owner_UserId = Submitter_UserId;
             this.Submitter_UserId = Submitter_UserId;
             this.TicketState_StateId = TicketState_StateId;

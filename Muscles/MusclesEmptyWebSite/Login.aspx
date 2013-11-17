@@ -10,15 +10,23 @@
     <form id="form1" runat="server">
         <h1>User Login</h1>
         <p>
-            <asp:Label ID="Label1" runat="server" Text="User Name"></asp:Label>
+            User Name&nbsp;
+        <asp:TextBox ID="UserNameTextBox" runat="server"></asp:TextBox>
+        </p>
+            Password&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="PasswordTextBox" runat="server" TextMode="Password"></asp:TextBox>
+       
+            <br />
+        <br />
+       
+            <asp:Button ID="LoginButton" runat="server" OnClick="LoginButton_Click" Text="Login" />
         &nbsp;&nbsp;
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        </p>
-        <p>
-            <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-        </p>
-    </form>
+            <asp:Button ID="CancelButton" runat="server" Text="Cancel" />
+        
+        <br />
+        <br />
+        <a href="Register.aspx">click here</a>
+        
+        to register a new user</form>
 </body>
 </html>

@@ -8,25 +8,22 @@
     </head>
 <body>
     <form id="form1" runat="server">
-        <br />
-        <br />
-        <br />
+        <h1>
+        Click &quot;Login&quot; to login or &quot;Register&quot; to create a new user.</h1>
+
         <table style="width:99%;">
             <tr>
-                <td>
+                <td align="center">
                     
-                    <a href="ViewAllTickets.aspx">View All Tickets</a></td>
-                <td>
-                    
-                    <a href="ViewMyTickets.aspx">View My Tickets</a></td>
-                <td>
-                    
-                    <a href="CreateTicket.aspx">Create Ticket</a></td>
-                <td>
-                    
-                    <a href="SearchTickets.aspx">Search Ticket</a></td>
+                    <a href="/Login.aspx">Login</a>
+                </td>
+                <td align="center">
+                    <a href="/Register.aspx">Register</a></td>
+                <td />
+
             </tr>
         </table>
     </form>
+    
     </body>
 </html>

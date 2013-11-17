@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="004c76f3c57f4affa749860085e59092" Name="Diagram1">
+      <Diagram DiagramId="004c76f3c57f4affa749860085e59092" Name="Diagram1" ZoomLevel="34">
         <EntityTypeShape EntityType="bullerMusclesModel.Ticket" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="bullerMusclesModel.User" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <AssociationConnector Association="bullerMusclesModel.FK_dbo_Tickets_dbo_Users_Owner_UserId" ManuallyRouted="false" />

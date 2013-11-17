@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DAL;
+using Business;
 
 public partial class Login : System.Web.UI.Page
 {
@@ -13,6 +15,31 @@ public partial class Login : System.Web.UI.Page
     }
     protected void UserName_TextChanged(object sender, EventArgs e)
     {
+        
 
+    }
+    protected void LoginButton_Click(object sender, EventArgs e)
+    {
+        string username = UserNameTextBox.Text;
+        string password = PasswordTextBox.Text;
+        User user1 = new UserMgr().RetrieveUser("UserName", username);
+
+        if (user1 != null)
+        {
+            if (user1.UserName == username)
+            {
+                if (user1.Password == password)
+                {
+                    Session["user"] = user1;
+                    Session["id"] = user1.UserId;
+                    Session["username"] = user1.UserName;
+                    Response.Redirect("/Restricted/Home.aspx");
+                }
+                else
+                    Response.Redirect("/Login.aspx");
+            }
+        }
+        //Response.BufferOutput = true;
+        Response.Redirect("/Login.aspx");
     }
 }

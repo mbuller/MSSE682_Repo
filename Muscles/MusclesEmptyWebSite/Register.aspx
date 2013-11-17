@@ -10,17 +10,18 @@
     <form id="form1" runat="server">
         <h1>Register New User</h1>
         <br />
-        User Name <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        User Name <asp:TextBox ID="UserNameTextBox" runat="server"></asp:TextBox>
         <br />
         <br />
         Password&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
-        <br />
-        <br />
-        Password&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged1" TextMode="Password"></asp:TextBox>
-        <br />
-        <br />
+        <asp:TextBox ID="PasswordTextBox" runat="server" TextMode="Password"></asp:TextBox>
+        <p>
+            <asp:Button ID="RegisterButton" runat="server" OnClick="RegisterButton_Click" Text="Register" />
+        &nbsp;&nbsp;
+            <asp:Button ID="CancelButton" runat="server" Text="Cancel" />
+        </p>
+        <p>
+            <a href="Login.aspx">click here</a> to login with an already registered name</p>
     </form>
 </body>
 </html>
