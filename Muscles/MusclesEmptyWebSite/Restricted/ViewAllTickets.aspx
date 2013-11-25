@@ -1,6 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ViewAllTickets.aspx.cs" Inherits="ViewAllTickets" %>
 
 <!DOCTYPE html>
+<style>
+   .HiddenCol{display:none;}                
+</style>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">

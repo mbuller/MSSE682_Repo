@@ -31,7 +31,8 @@
         </table>
     
        <h1> Create New Ticket</h1>
-        Submitter:<br />
+        Submitter:  <%:Session["username"]%>
+        <br />
         <br />
         
     

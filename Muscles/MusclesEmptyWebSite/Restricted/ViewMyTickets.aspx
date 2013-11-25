@@ -2,6 +2,10 @@
 
 <!DOCTYPE html>
 
+<style>
+   .HiddenCol{display:none;}                
+</style>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
@@ -33,6 +37,10 @@
         </div>
     <h2>Submitted Tickets</h2>
         
+        <asp:ObjectDataSource ID="ListStateObjectDataSource" runat="server" SelectMethod="RetrieveAllStates" TypeName="Business.StateMgr"></asp:ObjectDataSource>
+        
+        <asp:ObjectDataSource ID="ListUsersObjectDataSource" runat="server" OnSelecting="ListUsersObjectDataSource_Selecting" SelectMethod="RetrieveAllUsers" TypeName="Business.UserMgr"></asp:ObjectDataSource>
+        
         <asp:ObjectDataSource ID="SubmitterObjectDataSource" runat="server" OnSelecting="SubmitterObjectDataSource_Selecting" SelectMethod="RetrieveTickets" TypeName="Business.TicketMgr" DataObjectTypeName="DAL.Ticket" UpdateMethod="ModifyTicket">
             <SelectParameters>
                 <asp:Parameter Name="DBColumnName" Type="String" DefaultValue="Submitter_UserId" />
@@ -46,12 +54,28 @@
                 <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
                 <asp:BoundField DataField="Headline" HeaderText="Headline" SortExpression="Headline" />
                 <asp:BoundField DataField="Notes" HeaderText="Notes" SortExpression="Notes" />
-                <asp:BoundField DataField="Owner_UserId" HeaderText="Owner_UserId" SortExpression="Owner_UserId" ReadOnly="True" />
-                <asp:BoundField DataField="Submitter_UserId" HeaderText="Submitter_UserId" SortExpression="Submitter_UserId" ReadOnly="True" />
-                <asp:BoundField DataField="TicketState_StateId" HeaderText="TicketState_StateId" SortExpression="TicketState_StateId" ReadOnly="True" />
-                <asp:BoundField DataField="TicketOwnerUserName" HeaderText="Owner" SortExpression="TicketOwnerUserName" />
+                                <asp:BoundField DataField="Owner_UserId" HeaderText="Owner_UserId" SortExpression="Owner_UserId" ReadOnly="True" Visible="False" />
+                <asp:BoundField DataField="Submitter_UserId" HeaderText="Submitter_UserId" SortExpression="Submitter_UserId" ReadOnly="True" Visible="False" />
+                <asp:BoundField DataField="TicketState_StateId" HeaderText="TicketState_StateId" SortExpression="TicketState_StateId" ReadOnly="True" Visible="False" />
+                <asp:TemplateField HeaderText="Owner" SortExpression="TicketOwnerUserName">
+                    <EditItemTemplate>
+                        <asp:DropDownList ID="OwnerDropDownList" runat="server" DataSourceID="ListUsersObjectDataSource" DataTextField="UserName" DataValueField="UserId" SelectedValue='<%# Bind("Owner_UserId") %>'>
+                        </asp:DropDownList>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("TicketOwnerUserName") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="TicketSubmitterUserName" HeaderText="Submitter" ReadOnly="True" SortExpression="TicketSubmitterUserName" />
-                <asp:BoundField DataField="TicketStateName" HeaderText="State" SortExpression="TicketStateName" />
+                <asp:TemplateField HeaderText="State" SortExpression="TicketStateName">
+                    <EditItemTemplate>
+                        <asp:DropDownList ID="StateDropDownList" runat="server" DataSourceID="ListStateObjectDataSource" DataTextField="StateName" DataValueField="StateId" SelectedValue='<%# Bind("TicketState_StateId") %>'>
+                        </asp:DropDownList>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label2" runat="server" Text='<%# Bind("TicketStateName") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
             </Columns>
         </asp:GridView>
         <br />
@@ -71,12 +95,28 @@
                 <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
                 <asp:BoundField DataField="Headline" HeaderText="Headline" SortExpression="Headline" />
                 <asp:BoundField DataField="Notes" HeaderText="Notes" SortExpression="Notes" />
-                <asp:BoundField DataField="Owner_UserId" HeaderText="Owner_UserId" SortExpression="Owner_UserId" ReadOnly="True" />
-                <asp:BoundField DataField="Submitter_UserId" HeaderText="Submitter_UserId" SortExpression="Submitter_UserId" ReadOnly="True" />
-                <asp:BoundField DataField="TicketState_StateId" HeaderText="TicketState_StateId" SortExpression="TicketState_StateId" ReadOnly="True" />
-                <asp:BoundField DataField="TicketOwnerUserName" HeaderText="Owner" SortExpression="TicketOwnerUserName" />
+                <asp:BoundField DataField="Owner_UserId" HeaderText="Owner_UserId" SortExpression="Owner_UserId" ReadOnly="True" Visible="False" />
+                <asp:BoundField DataField="Submitter_UserId" HeaderText="Submitter_UserId" SortExpression="Submitter_UserId" ReadOnly="True" Visible="False" />
+                <asp:BoundField DataField="TicketState_StateId" HeaderText="TicketState_StateId" SortExpression="TicketState_StateId" ReadOnly="True" Visible="False" />
+                <asp:TemplateField HeaderText="Owner" SortExpression="TicketOwnerUserName">
+                    <EditItemTemplate>
+                        <asp:DropDownList ID="OwnerDropDownList" runat="server" DataSourceID="ListUsersObjectDataSource" DataTextField="UserName" DataValueField="UserId" SelectedValue='<%# Bind("Owner_UserId") %>'>
+                        </asp:DropDownList>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("TicketOwnerUserName") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="TicketSubmitterUserName" HeaderText="Submitter" ReadOnly="True" SortExpression="TicketSubmitterUserName" />
-                <asp:BoundField DataField="TicketStateName" HeaderText="State" SortExpression="TicketStateName" />
+                <asp:TemplateField HeaderText="State" SortExpression="TicketStateName">
+                    <EditItemTemplate>
+                        <asp:DropDownList ID="StateDropDownList" runat="server" DataSourceID="ListStateObjectDataSource" DataTextField="StateName" DataValueField="StateId" SelectedValue='<%# Bind("TicketState_StateId") %>'>
+                        </asp:DropDownList>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label2" runat="server" Text='<%# Bind("TicketStateName") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
             </Columns>
         </asp:GridView>
     </form>
