@@ -33,6 +33,7 @@ public partial class Register : System.Web.UI.Page
             //Response.BufferOutput = true;
             Session["user"] = user1;
             Session["id"] = user1.UserId;
+            Session["username"] = user1.UserName;
             Response.Redirect("/Restricted/Home.aspx");
         }
         else

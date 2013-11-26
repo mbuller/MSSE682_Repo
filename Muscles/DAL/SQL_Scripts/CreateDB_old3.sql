@@ -143,23 +143,6 @@ ON [dbo].[Tickets]
     ([TicketState_StateId]);
 GO
 
-INSERT INTO States (StateName)
-VALUES ('Submitted');
-
-INSERT INTO States (StateName)
-VALUES ('Assigned');
-
-INSERT INTO States (StateName)
-VALUES ('Need_Info');
-
-INSERT INTO States (StateName)
-VALUES ('Duplicate');
-
-INSERT INTO States (StateName)
-VALUES ('Resolved');
-
-INSERT INTO States (StateName)
-VALUES ('Rejected');
 -- --------------------------------------------------
 -- Script has ended
 -- --------------------------------------------------
