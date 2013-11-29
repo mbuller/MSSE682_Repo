@@ -39,6 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="authentication\AuthenticationSvcRepoImpl.cs" />
+    <Compile Include="authentication\AuthenticationSvcSocketImpl.cs" />
+    <Compile Include="IAuthenticationSvc.cs" />
     <Compile Include="ImplRepository\StateSvcRepoImpl.cs" />
     <Compile Include="ImplRepository\TicketSvcRepoImpl.cs" />
     <Compile Include="ImplRepository\UserSvcRepoImpl.cs" />
@@ -50,13 +53,13 @@
     <Compile Include="SvcFactory.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{29ae7591-02c3-4857-b195-95e8a295f77c}</Project>
       <Name>DAL</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

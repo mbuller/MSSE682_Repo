@@ -32,6 +32,11 @@ namespace Service
                 case "TicketSvcRepoImpl":
                     ReturnService = (IService)new TicketSvcRepoImpl();
                     break;
+                case "IAuthenticationSvc":
+                    ReturnService = (IService)new AuthenticationSvcSocketImpl();
+                    //ReturnService = (IService)new AuthenticationSvcRepoImpl();
+                    
+                    break;
                 default:
                     ReturnService = null;
                     throw new System.ArgumentException("Unimplemented Service type in SvcFactory " + ReturnService);

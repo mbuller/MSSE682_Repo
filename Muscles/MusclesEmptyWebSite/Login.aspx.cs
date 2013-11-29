@@ -22,22 +22,20 @@ public partial class Login : System.Web.UI.Page
     {
         string username = UserNameTextBox.Text;
         string password = PasswordTextBox.Text;
-        User user1 = new UserMgr().RetrieveUser("UserName", username);
-
-        if (user1 != null)
+        bool allowAccess = new AuthenticationMgr().AuthenticateUser(username, password);
+        if (allowAccess == true)
         {
-            if (user1.UserName == username)
+            User user1 = new UserMgr().RetrieveUser("UserName", username);
+
+            if (user1 != null)
             {
-                if (user1.Password == password)
-                {
-                    Session["user"] = user1;
-                    Session["id"] = user1.UserId;
-                    Session["username"] = user1.UserName;
-                    Response.Redirect("/Restricted/Home.aspx");
-                }
-                else
-                    Response.Redirect("/Login.aspx");
+                Session["user"] = user1;
+                Session["id"] = user1.UserId;
+                Session["username"] = user1.UserName;
+                Response.Redirect("/Restricted/Home.aspx");
             }
+            else
+                Response.Redirect("/Login.aspx");
         }
         //Response.BufferOutput = true;
         Response.Redirect("/Login.aspx");

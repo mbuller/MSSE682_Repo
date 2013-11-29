@@ -25,16 +25,12 @@ public partial class Register : System.Web.UI.Page
     {
         string username = UserNameTextBox.Text;
         string password = PasswordTextBox.Text;
-        User user1 = new User(username, password);
-        User checkUserName = new UserMgr().RetrieveUser("UserName", username);
-        if (checkUserName == null)
+       
+        bool registeredUser = new AuthenticationMgr().RegisterUser(username, password);
+        if (registeredUser == true)
         {
-            new UserMgr().CreateUser(user1);
-            //Response.BufferOutput = true;
-            Session["user"] = user1;
-            Session["id"] = user1.UserId;
-            Session["username"] = user1.UserName;
-            Response.Redirect("/Restricted/Home.aspx");
+          
+            Response.Redirect("/Login.aspx");
         }
         else
             Response.Redirect("/Register.aspx");
