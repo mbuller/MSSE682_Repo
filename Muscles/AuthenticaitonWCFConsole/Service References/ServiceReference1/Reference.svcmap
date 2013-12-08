@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="97919aa0-4657-484b-990f-15c843707f22" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8090/MusclesAuthenticationWCF/LoginWCFImpl/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="0191f0cf-548e-40d1-9568-554ed4e327c7" SourceId="1" SourceUrl="http://localhost:8090/MusclesAuthenticationWCF/LoginWCFImpl/?disco" />
+    <MetadataFile FileName="LoginWCFImpl.wsdl" MetadataType="Wsdl" ID="82610fef-ac34-4c86-aabb-2b29a9a6882b" SourceId="1" SourceUrl="http://localhost:8090/MusclesAuthenticationWCF/LoginWCFImpl/?wsdl" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="3ad47247-8e8c-48e2-8d7c-e4640c946708" SourceId="1" SourceUrl="http://localhost:8090/MusclesAuthenticationWCF/LoginWCFImpl/?xsd=xsd2" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="a0414d5f-b77b-4b15-bf11-6a693f25c98a" SourceId="1" SourceUrl="http://localhost:8090/MusclesAuthenticationWCF/LoginWCFImpl/?xsd=xsd0" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="1a45dff7-97cf-4d79-8197-ac8eb2915885" SourceId="1" SourceUrl="http://localhost:8090/MusclesAuthenticationWCF/LoginWCFImpl/?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
