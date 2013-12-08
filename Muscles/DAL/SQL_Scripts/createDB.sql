@@ -6,6 +6,8 @@
 -- Generated from EDMX file: C:\Users\mbuller\Documents\GitHub\MSSE682_Repo\Muscles\DAL\Model1.edmx
 -- --------------------------------------------------
 
+IF NOT EXISTS(select * from sys.databases where name = 'bullerMuscles')
+	CREATE DATABASE bullerMuscles;
 SET QUOTED_IDENTIFIER OFF;
 GO
 USE [bullerMuscles];

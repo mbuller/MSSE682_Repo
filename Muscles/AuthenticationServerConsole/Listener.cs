@@ -210,7 +210,7 @@ namespace AuthenticationServerConsole
 
     public class ThreadingRegister
     {
-        private Socket _socket = null;
+        //private Socket _socket = null;
 
         public ThreadingRegister()
         { }
