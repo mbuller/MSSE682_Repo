@@ -64,26 +64,26 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusclesAuthenticationWCF", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusclesAuthenticatoinWCF_Host", "MusclesAuthenticatoinWCF_Host\MusclesAuthenticatoinWCF_Host.csproj", "{4AE2DD5D-FE85-466D-8292-C5A91CE16356}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MusclesAuthenticationWebService(1)", "http://localhost:54357", "{046B508A-95C0-4700-BCFD-39D02DB23285}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MusclesAuthenticationWebService", "http://localhost:54311", "{1A852832-846A-4F1F-B112-C1FC0D75A0D8}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		ProjectReferences = "{29ae7591-02c3-4857-b195-95e8a295f77c}|DAL.dll;{77900e56-5f19-4b24-8622-f94ede75112b}|Business.dll;{4980F8F3-DACF-47DF-B7AD-6556DB9706D6}|Service.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_54357"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\Visual Studio 2012\Projects\Muscles\MusclesAuthenticationWebService\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54357\"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54311"
+		Debug.AspNetCompiler.PhysicalPath = "MusclesAuthenticationWebService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54311\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_54357"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\Visual Studio 2012\Projects\Muscles\MusclesAuthenticationWebService\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54357\"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54311"
+		Release.AspNetCompiler.PhysicalPath = "MusclesAuthenticationWebService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54311\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "..\..\..\Visual Studio 2012\Projects\Muscles\MusclesAuthenticationWebService\"
+		SlnRelativePath = "MusclesAuthenticationWebService\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -137,10 +137,10 @@ Global
 		{4AE2DD5D-FE85-466D-8292-C5A91CE16356}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AE2DD5D-FE85-466D-8292-C5A91CE16356}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AE2DD5D-FE85-466D-8292-C5A91CE16356}.Release|Any CPU.Build.0 = Release|Any CPU
-		{046B508A-95C0-4700-BCFD-39D02DB23285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{046B508A-95C0-4700-BCFD-39D02DB23285}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{046B508A-95C0-4700-BCFD-39D02DB23285}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{046B508A-95C0-4700-BCFD-39D02DB23285}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{1A852832-846A-4F1F-B112-C1FC0D75A0D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A852832-846A-4F1F-B112-C1FC0D75A0D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A852832-846A-4F1F-B112-C1FC0D75A0D8}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A852832-846A-4F1F-B112-C1FC0D75A0D8}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -124,10 +124,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://localhost:54357/AuthenticateWebService.asmx">
+    <WebReferenceUrl Include="http://localhost:54311/AuthenticateWebService.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\AuthenticateWebService\</RelPath>
-      <UpdateFromURL>http://localhost:54357/AuthenticateWebService.asmx</UpdateFromURL>
+      <UpdateFromURL>http://localhost:54311/AuthenticateWebService.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

@@ -100,10 +100,10 @@
   </wsdl:binding>
   <wsdl:service name="AuthenticateWebService">
     <wsdl:port name="AuthenticateWebServiceSoap" binding="tns:AuthenticateWebServiceSoap">
-      <soap:address location="http://localhost:54357/AuthenticateWebService.asmx" />
+      <soap:address location="http://localhost:54311/AuthenticateWebService.asmx" />
     </wsdl:port>
     <wsdl:port name="AuthenticateWebServiceSoap12" binding="tns:AuthenticateWebServiceSoap12">
-      <soap12:address location="http://localhost:54357/AuthenticateWebService.asmx" />
+      <soap12:address location="http://localhost:54311/AuthenticateWebService.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
