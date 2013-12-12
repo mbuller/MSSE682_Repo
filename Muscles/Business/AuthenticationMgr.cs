@@ -11,6 +11,10 @@ namespace Business
 {
     public class AuthenticationMgr : Manager
     {
+        public int USER_NAME_MIN = 1;
+        public int USER_NAME_MAX = 20;
+        public int PASSWORD_MIN = 1;
+        public int PASSWORD_MAX = 20;
 
         public IAuthenticationSvc authenticationSvc;
 
@@ -21,13 +25,25 @@ namespace Business
 
          public bool AuthenticateUser(String UserName, String Password)
         {
-            return authenticationSvc.AuthenticateUser(UserName, Password);
+            UserName = UserName.Trim();
+            Password = Password.Trim();
+            if ((UserName.Length < USER_NAME_MIN) || (UserName.Length > USER_NAME_MAX ||
+                Password.Length < PASSWORD_MIN) || (Password.Length > PASSWORD_MAX))
+                return false;
+            else
+                return authenticationSvc.AuthenticateUser(UserName, Password);
           
         }
 
          public bool RegisterUser(String UserName, String Password)
          {
-             return authenticationSvc.RegisterUser(UserName, Password);
+             UserName = UserName.Trim();
+             Password = Password.Trim();
+             if ((UserName.Length < USER_NAME_MIN) || (UserName.Length > USER_NAME_MAX ||
+                 Password.Length < PASSWORD_MIN) || (Password.Length > PASSWORD_MAX))
+                 return false;
+             else
+                return authenticationSvc.RegisterUser(UserName, Password);
              
          }
     }
